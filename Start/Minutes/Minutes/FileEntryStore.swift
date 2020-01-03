@@ -36,7 +36,7 @@ class FileEntryStore
             let baseUrl: URL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
             
             let fileUrl = baseUrl.appendingPathComponent(entry.id)
-            
+    
             let data: Data = FileEntryStore.serialize(entry)!
             
             try data.write(to: fileUrl)
